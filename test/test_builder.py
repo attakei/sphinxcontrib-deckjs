@@ -12,5 +12,8 @@ def test_builder():
         app.build()
         html = (app.outdir / 'contents.html').read_text()
         assert 'Slide title' in html
+        assert path.exists(app.outdir / '_sources') is False
+        assert 'class="headerlink"' not in html
+        assert 'class="reference internal"' not in html
 
     _test_builder()

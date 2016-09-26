@@ -12,6 +12,8 @@ __version__ = '0.0.1'
 
 class DeckjsBuilder(StandaloneHTMLBuilder):
     name = 'deckjs'
+    copysource = False
+    add_permalinks = False
 
 
 def setup(app):
