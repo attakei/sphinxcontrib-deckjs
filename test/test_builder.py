@@ -11,11 +11,11 @@ def test_builder():
     def _test_builder(app, status, warning):
         app.build()
         html = (app.outdir / 'contents.html').read_text()
-        print(html)
         assert path.exists(app.outdir / '_sources') is False
         assert 'class="headerlink"' not in html
         assert 'class="reference internal"' not in html
         assert '<h1>Slide title</h1>' in html
         assert '<h1>Slide title</h1>\n</section>' in html
+        assert 'modernizr.min.js' in html
 
     _test_builder()

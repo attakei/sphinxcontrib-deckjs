@@ -4,11 +4,15 @@
     :author: attakei <attakei@gmail.com>
     :copyright: attakei. All Rights Reserved.
 """
+from os import path
 from sphinx.builders.html import StandaloneHTMLBuilder
 from sphinx.writers.html import HTMLTranslator
 
 
 __version__ = '0.0.1'
+
+package_dir = path.abspath(path.dirname(__file__))
+template_path = path.join(package_dir, 'templates')
 
 
 class DeckjsBuilder(StandaloneHTMLBuilder):
@@ -35,6 +39,11 @@ class DeckjsTranslator(HTMLTranslator):
         self.section_level -= 1
         if self.section_level == 0:
             self.body.append('</section>\n')
+
+
+def get_path():
+    """entry-point for sphinx theme."""
+    return template_path
 
 
 def setup(app):
