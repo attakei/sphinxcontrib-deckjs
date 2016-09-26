@@ -12,7 +12,7 @@ requires = ['Sphinx>=0.6']
 
 setup(
     name='sphinxcontrib-sphinxcontrib-deckjs',
-    version='0.1',
+    version='0.0.1',
     url='http://bitbucket.org/birkenfeld/sphinx-contrib',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-sphinxcontrib-deckjs',
     license='BSD',
@@ -22,13 +22,14 @@ setup(
     long_description=long_desc,
     zip_safe=False,
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 3 - Alpha',
         'Environment :: Console',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 3.5',
         'Framework :: Sphinx :: Extension',
         'Framework :: Sphinx :: Theme',
         'Topic :: Documentation',
