@@ -1,0 +1,10 @@
+language: python
+python:
+  - 3.5
+install:
+  - pip install -r test-requirements.txt --use-wheel
+  - pip install -q coverage coveralls --use-wheel
+script:
+  - coverage run --source=hoge_test setup.py test
+notifications:
+  email: false
