@@ -1,12 +1,34 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup, find_packages
+import sys
 from codecs import open
+from setuptools import setup, find_packages
+from setuptools.command.test import test as TestCommand
+
+
+class PyTest(TestCommand):
+    user_options = [('pytest-args=', 'a', "Arguments to pass to pytest")]
+
+
+    def initialize_options(self):
+        TestCommand.initialize_options(self)
+        self.pytest_args = []
+
+    def run_tests(self):
+        #import here, cause outside the eggs aren't loaded
+        import pytest
+        errno = pytest.main(self.pytest_args)
+        sys.exit(errno)
 
 
 with open('README.rst', encoding='utf-8') as fp:
     long_description = fp.read() 
 
-requires = ['Sphinx>=0.6']
+install_requires = [
+    'Sphinx>=0.6',
+]
+tests_require=[
+    'pytest',
+]
 
 
 setup(
@@ -37,6 +59,8 @@ setup(
     platforms='any',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=requires,
+    install_requires=install_requires,
     namespace_packages=['sphinxcontrib'],
+    tests_require=tests_require,
+    cmdclass = {'test': PyTest},
 )
