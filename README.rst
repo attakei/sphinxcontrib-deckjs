@@ -1,6 +1,14 @@
 Sphinx extension to generate presentation based from deck.js
 ============================================================
 
+.. image:: https://img.shields.io/pypi/v/sphonxcontrib-deckjs.svg?maxAge=2592000
+   :target: https://pypi.python.org/sphinxcontrib-deckjs
+
+.. image:: https://img.shields.io/travis/attakei/sphinxcontrib-deckjs.svg?maxAge=2592000
+   :target: https://travis-ci.org/attakei/sphinxcontrib-deckjs
+
+.. image:: https://img.shields.io/coveralls/attakei/sphinxcontrib-deckjs.svg?maxAge=2592000
+   :target: https://coveralls.io/github/attakei/sphinxcontrib-deckjs
 
 Installation
 ------------
