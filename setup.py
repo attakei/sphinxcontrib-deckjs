@@ -1,25 +1,24 @@
 # -*- coding: utf-8 -*-
-
 from setuptools import setup, find_packages
+from codecs import open
 
-long_desc = '''
-This package contains the sphinxcontrib-deckjs Sphinx extension.
 
-.. add description here ..
-'''
+with open('README.rst', encoding='utf-8') as fp:
+    long_description = fp.read() 
 
 requires = ['Sphinx>=0.6']
 
+
 setup(
-    name='sphinxcontrib-sphinxcontrib-deckjs',
+    name='sphinxcontrib-deckjs',
     version='0.0.1',
-    url='http://bitbucket.org/birkenfeld/sphinx-contrib',
-    download_url='http://pypi.python.org/pypi/sphinxcontrib-sphinxcontrib-deckjs',
+    url='https://github.com/attakei/sphinxcontrib-deckjs',
+    # download_url='http://pypi.python.org/pypi/sphinxcontrib-deckjs',
     license='BSD',
     author='attakei',
     author_email='attakei@gmail.com',
     description='Sphinx "sphinxcontrib-deckjs" extension',
-    long_description=long_desc,
+    long_description=long_description,
     zip_safe=False,
     classifiers=[
         'Development Status :: 3 - Alpha',
