@@ -30,7 +30,7 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Framework :: Sphinx :: Extension',
-        #'Framework :: Sphinx :: Theme',
+        'Framework :: Sphinx :: Theme',
         'Topic :: Documentation',
         'Topic :: Utilities',
     ],
