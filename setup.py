@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 
 with open('README.rst', encoding='utf-8') as fp:
-    long_description = fp.read() 
+    long_description = fp.read()
 
 install_requires = [
     'Sphinx>=0.6',
@@ -15,7 +15,9 @@ setup_requires = [
 ]
 
 tests_require = [
+    'pytest-pep8',
     'pytest',
+    'sphinx-testing',
 ]
 
 

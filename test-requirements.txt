@@ -1,2 +1,3 @@
 sphinx-testing
 pytest
+pytest-pep8
