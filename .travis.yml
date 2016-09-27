@@ -10,3 +10,8 @@ after_success:
   - coveralls
 notifications:
   email: false
+  slack:
+    rooms:
+      - 'attakei:3zVtXNfQKYcoG8M7oAWe8HXh'
+    on_success: change
+    on_failure: always
