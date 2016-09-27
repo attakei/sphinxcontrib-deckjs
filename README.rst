@@ -29,6 +29,13 @@ Usage
 3. Write your presentation
 4. Make!
 
+
+License
+-------
+
+See `it <./LICENSE>`_
+
+
 Links
 -----
 

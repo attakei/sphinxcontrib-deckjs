@@ -51,6 +51,11 @@ setup(
     include_package_data=True,
     install_requires=install_requires,
     namespace_packages=['sphinxcontrib'],
+    entry_points = {
+        'sphinx_themes': [
+            'path = sphinxcontrib.deckjs:get_path',
+        ],
+    },
     setup_requires=setup_requires,
     tests_require=tests_require,
 )
